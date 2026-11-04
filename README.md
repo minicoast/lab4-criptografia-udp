@@ -12,7 +12,7 @@ Repositorio oficial de evidencias, código fuente, capturas de tráfico (`.pcap`
 - 🌐 [`transacciones_cifradas.pcap`](./transacciones_cifradas.pcap) — Captura de red original con 1 paquete `RSA_PIN|` y 40 paquetes `AESGCM|`.
 - 🔑 [`clave_publica.pem`](./clave_publica.pem) — Clave pública RSA-2048 proporcionada.
 - 🔐 [`clave_privada.pem`](./clave_privada.pem) — Clave privada RSA-2048 utilizada para el descifrado RSA-OAEP (SHA-256).
-- 🖼️ [`generar_capturas.py`](./generar_capturas.py) — Generador reproducible de las 9 capturas de evidencia en alta resolución.
+- 🖥️ [`capturar_windows_real.ps1`](./capturar_windows_real.ps1) — Script en PowerShell de captura real de ventanas en Windows 11 (Windows PowerShell + Wireshark GUI).
 
 ### 🔹 Actividad 1 — Servidor OpenSSH en Docker y Análisis de Tráfico (`actividad_1/`)
 - 🐳 [`actividad_1/Dockerfile`](./actividad_1/Dockerfile) — Construcción de imagen `ssh-lab4` sobre Ubuntu 22.04 con OpenSSH Server, `ssh-keygen -A` y validación `sshd -t`.
