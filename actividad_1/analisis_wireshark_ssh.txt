@@ -1,0 +1,915 @@
+=====================================================================================
+ANÁLISIS DE TRÁFICO SSH EN WIRESHARK / TSHARK - archivo: captura_ssh.pcap
+=====================================================================================
+
+--- 1. LISTA COMPLETA DE TRAMAS CAPTURADAS (56 PAQUETES) ---
+
+1 0.000000000    127.0.0.1 → 127.0.0.1    TCP 56 0xd43f 55342 → 2222 [SYN] Seq=0 Win=65535 Len=0 MSS=65495 WS=256 SACK_PERM
+    2 0.000051600    127.0.0.1 → 127.0.0.1    TCP 56 0xd440 2222 → 55342 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=65495 WS=256 SACK_PERM
+    3 0.000081900    127.0.0.1 → 127.0.0.1    TCP 44 0xd441 55342 → 2222 [ACK] Seq=1 Ack=1 Win=65280 Len=0
+    4 0.004537400    127.0.0.1 → 127.0.0.1    SSH 77 0xd442 Client: Protocol (SSH-2.0-OpenSSH_for_Windows_9.5)
+    5 0.004562900    127.0.0.1 → 127.0.0.1    TCP 44 0xd443 2222 → 55342 [ACK] Seq=1 Ack=34 Win=65280 Len=0
+    6 0.006253600    127.0.0.1 → 127.0.0.1    SSHv2 86 0xd444 Server: Protocol (SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.18)
+    7 0.006274000    127.0.0.1 → 127.0.0.1    TCP 44 0xd445 55342 → 2222 [ACK] Seq=34 Ack=43 Win=65280 Len=0
+    8 0.006831900    127.0.0.1 → 127.0.0.1    SSHv2 260 0xd446 Server: Key Exchange Init
+    9 0.006845500    127.0.0.1 → 127.0.0.1    TCP 44 0xd447 55342 → 2222 [ACK] Seq=34 Ack=259 Win=65024 Len=0
+   10 0.007393400    127.0.0.1 → 127.0.0.1    SSHv2 1476 0xd448 Client: Key Exchange Init
+   11 0.007408900    127.0.0.1 → 127.0.0.1    TCP 44 0xd449 2222 → 55342 [ACK] Seq=259 Ack=1466 Win=64000 Len=0
+   12 0.010968300    127.0.0.1 → 127.0.0.1    SSHv2 92 0xd44a Client: Elliptic Curve Diffie-Hellman Key Exchange Init
+   13 0.010983300    127.0.0.1 → 127.0.0.1    TCP 44 0xd44b 2222 → 55342 [ACK] Seq=259 Ack=1514 Win=64000 Len=0
+   14 0.013487600    127.0.0.1 → 127.0.0.1    SSHv2 588 0xd44c Server: Elliptic Curve Diffie-Hellman Key Exchange Reply, New Keys, Encrypted packet (len=336)
+   15 0.013516800    127.0.0.1 → 127.0.0.1    TCP 44 0xd44d 55342 → 2222 [ACK] Seq=1514 Ack=803 Win=64512 Len=0
+   16 0.016662800    127.0.0.1 → 127.0.0.1    SSHv2 60 0xd44e Client: New Keys
+   17 0.016679000    127.0.0.1 → 127.0.0.1    TCP 44 0xd44f 2222 → 55342 [ACK] Seq=803 Ack=1530 Win=64000 Len=0
+   18 0.018035000    127.0.0.1 → 127.0.0.1    SSHv2 108 0xd450 Client: Encrypted packet (len=64)
+   19 0.018048600    127.0.0.1 → 127.0.0.1    TCP 44 0xd451 2222 → 55342 [ACK] Seq=803 Ack=1594 Win=63744 Len=0
+   20 0.018497000    127.0.0.1 → 127.0.0.1    SSHv2 108 0xd452 Server: Encrypted packet (len=64)
+   21 0.018511800    127.0.0.1 → 127.0.0.1    TCP 44 0xd453 55342 → 2222 [ACK] Seq=1594 Ack=867 Win=64512 Len=0
+   22 0.018839600    127.0.0.1 → 127.0.0.1    SSHv2 124 0xd454 Client: Encrypted packet (len=80)
+   23 0.018855100    127.0.0.1 → 127.0.0.1    TCP 44 0xd455 2222 → 55342 [ACK] Seq=867 Ack=1674 Win=63744 Len=0
+   24 0.028500500    127.0.0.1 → 127.0.0.1    SSHv2 140 0xd456 Server: Encrypted packet (len=96)
+   25 0.028517400    127.0.0.1 → 127.0.0.1    TCP 44 0xd457 55342 → 2222 [ACK] Seq=1674 Ack=963 Win=64512 Len=0
+   26 0.030220400    127.0.0.1 → 127.0.0.1    SSHv2 156 0xd458 Client: Encrypted packet (len=112)
+   27 0.030237400    127.0.0.1 → 127.0.0.1    TCP 44 0xd459 2222 → 55342 [ACK] Seq=963 Ack=1786 Win=63744 Len=0
+   28 0.040076600    127.0.0.1 → 127.0.0.1    SSHv2 140 0xd45a Server: Encrypted packet (len=96)
+   29 0.040091000    127.0.0.1 → 127.0.0.1    TCP 44 0xd45b 55342 → 2222 [ACK] Seq=1786 Ack=1059 Win=64256 Len=0
+   30 0.055968500    127.0.0.1 → 127.0.0.1    SSHv2 204 0xd45c Client: Encrypted packet (len=160)
+   31 0.055989900    127.0.0.1 → 127.0.0.1    TCP 44 0xd45d 2222 → 55342 [ACK] Seq=1059 Ack=1946 Win=63488 Len=0
+   32 0.093213800    127.0.0.1 → 127.0.0.1    SSHv2 92 0xd460 Server: Encrypted packet (len=48)
+   33 0.093238200    127.0.0.1 → 127.0.0.1    TCP 44 0xd461 55342 → 2222 [ACK] Seq=1946 Ack=1107 Win=64256 Len=0
+   34 0.094359100    127.0.0.1 → 127.0.0.1    SSHv2 204 0xd462 Client: Encrypted packet (len=160)
+   35 0.094380500    127.0.0.1 → 127.0.0.1    TCP 44 0xd463 2222 → 55342 [ACK] Seq=1107 Ack=2106 Win=63232 Len=0
+   36 0.095785600    127.0.0.1 → 127.0.0.1    SSHv2 172 0xd464 Server: Encrypted packet (len=128)
+   37 0.095803500    127.0.0.1 → 127.0.0.1    TCP 44 0xd465 55342 → 2222 [ACK] Seq=2106 Ack=1235 Win=64256 Len=0
+   38 0.137777300    127.0.0.1 → 127.0.0.1    SSHv2 108 0xd466 Server: Encrypted packet (len=64)
+   39 0.137796400    127.0.0.1 → 127.0.0.1    TCP 44 0xd467 55342 → 2222 [ACK] Seq=2106 Ack=1299 Win=64000 Len=0
+   40 0.138563700    127.0.0.1 → 127.0.0.1    SSHv2 140 0xd468 Client: Encrypted packet (len=96)
+   41 0.138578500    127.0.0.1 → 127.0.0.1    TCP 44 0xd469 2222 → 55342 [ACK] Seq=1299 Ack=2202 Win=63232 Len=0
+   42 0.139472900    127.0.0.1 → 127.0.0.1    SSHv2 156 0xd46a Server: Encrypted packet (len=112)
+   43 0.139487500    127.0.0.1 → 127.0.0.1    TCP 44 0xd46b 55342 → 2222 [ACK] Seq=2202 Ack=1411 Win=64000 Len=0
+   44 0.141377300    127.0.0.1 → 127.0.0.1    SSHv2 108 0xd46c Server: Encrypted packet (len=64)
+   45 0.141394300    127.0.0.1 → 127.0.0.1    TCP 44 0xd46d 55342 → 2222 [ACK] Seq=2202 Ack=1475 Win=64000 Len=0
+   46 0.142025700    127.0.0.1 → 127.0.0.1    SSHv2 108 0xd46e Server: Encrypted packet (len=64)
+   47 0.142044300    127.0.0.1 → 127.0.0.1    TCP 44 0xd46f 55342 → 2222 [ACK] Seq=2202 Ack=1539 Win=63744 Len=0
+   48 0.142658000    127.0.0.1 → 127.0.0.1    SSHv2 236 0xd470 Server: Encrypted packet (len=192)
+   49 0.142675900    127.0.0.1 → 127.0.0.1    TCP 44 0xd471 55342 → 2222 [ACK] Seq=2202 Ack=1731 Win=63744 Len=0
+   50 0.142686500    127.0.0.1 → 127.0.0.1    SSHv2 300 0xd472 Server: Encrypted packet (len=256)
+   51 0.142693600    127.0.0.1 → 127.0.0.1    TCP 44 0xd473 55342 → 2222 [ACK] Seq=2202 Ack=1987 Win=63488 Len=0
+   52 0.144556200    127.0.0.1 → 127.0.0.1    SSHv2 92 0xd474 Client: Encrypted packet (len=48)
+   53 0.144570700    127.0.0.1 → 127.0.0.1    TCP 44 0xd475 2222 → 55342 [ACK] Seq=1987 Ack=2250 Win=63232 Len=0
+   54 0.144587700    127.0.0.1 → 127.0.0.1    SSHv2 124 0xd476 Client: Encrypted packet (len=80)
+   55 0.144593900    127.0.0.1 → 127.0.0.1    TCP 44 0xd477 2222 → 55342 [ACK] Seq=1987 Ack=2330 Win=62976 Len=0
+   56 0.144980700    127.0.0.1 → 127.0.0.1    TCP 44 0xd478 55342 → 2222 [RST, ACK] Seq=2330 Ack=1987 Win=0 Len=0
+
+--- 2. INTERCAMBIO DE BANNERS EN TEXTO CLARO (FRAMES 4 y 6) ---
+
+Frame 4: Packet, 77 bytes on wire (616 bits), 77 bytes captured (616 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.821994800 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.821994800 UTC
+    Epoch Arrival Time: 1793799739.821994800
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 4.455500 milliseconds]
+    [Time since reference or first frame: 4.537400 milliseconds]
+    Frame Number: 4
+    Frame Length: 77 bytes (616 bits)
+    Capture Length: 77 bytes (616 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 73
+    Identification: 0xd442 (54338)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x286a [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 55342, Dst Port: 2222, Seq: 1, Ack: 1, Len: 33
+    Source Port: 55342
+    Destination Port: 2222
+    [Stream index: 0]
+    [Stream Packet Number: 4]
+    [Conversation completeness: Incomplete, ESTABLISHED (7)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 0... = Data: Absent
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ···ASS]
+    [TCP Segment Len: 33]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 2747073818
+    [Next Sequence Number: 34    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 3762068700
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0x61c0 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 4.537400 milliseconds]
+        [Time since previous frame in this TCP stream: 4.455500 milliseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 33]
+        [Bytes sent since last PSH flag: 33]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (33 bytes)
+SSH Protocol
+    Protocol: SSH-2.0-OpenSSH_for_Windows_9.5
+    [Direction: Client to Server]
+
+0000  02 00 00 00 45 00 00 49 d4 42 40 00 80 06 28 6a   ....E..I.B@...(j
+0010  7f 00 00 01 7f 00 00 01 d8 2e 08 ae a3 bd 05 1a   ................
+0020  e0 3c 9c dc 50 18 00 ff 61 c0 00 00 53 53 48 2d   .<..P...a...SSH-
+0030  32 2e 30 2d 4f 70 65 6e 53 53 48 5f 66 6f 72 5f   2.0-OpenSSH_for_
+0040  57 69 6e 64 6f 77 73 5f 39 2e 35 0d 0a            Windows_9.5..
+
+Frame 6: Packet, 86 bytes on wire (688 bits), 86 bytes captured (688 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.823711000 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.823711000 UTC
+    Epoch Arrival Time: 1793799739.823711000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 1.690700 milliseconds]
+    [Time delta from previous displayed frame: 1.716200 milliseconds]
+    [Time since reference or first frame: 6.253600 milliseconds]
+    Frame Number: 6
+    Frame Length: 86 bytes (688 bits)
+    Capture Length: 86 bytes (688 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 82
+    Identification: 0xd444 (54340)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x285f [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 2222, Dst Port: 55342, Seq: 1, Ack: 34, Len: 42
+    Source Port: 2222
+    Destination Port: 55342
+    [Stream index: 0]
+    [Stream Packet Number: 6]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 42]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 3762068700
+    [Next Sequence Number: 43    (relative sequence number)]
+    Acknowledgment Number: 34    (relative ack number)
+    Acknowledgment number (raw): 2747073851
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0x7e56 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 6.253600 milliseconds]
+        [Time since previous frame in this TCP stream: 1.690700 milliseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 42]
+        [Bytes sent since last PSH flag: 42]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (42 bytes)
+SSH Protocol
+    Protocol: SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.18
+    [Direction: Server to Client]
+
+0000  02 00 00 00 45 00 00 52 d4 44 40 00 80 06 28 5f   ....E..R.D@...(_
+0010  7f 00 00 01 7f 00 00 01 08 ae d8 2e e0 3c 9c dc   .............<..
+0020  a3 bd 05 3b 50 18 00 ff 7e 56 00 00 53 53 48 2d   ...;P...~V..SSH-
+0030  32 2e 30 2d 4f 70 65 6e 53 53 48 5f 38 2e 39 70   2.0-OpenSSH_8.9p
+0040  31 20 55 62 75 6e 74 75 2d 33 75 62 75 6e 74 75   1 Ubuntu-3ubuntu
+0050  30 2e 31 38 0d 0a                                 0.18..
+
+--- 3. NEGOCIACIÓN DE ALGORITMOS SSH_MSG_KEXINIT (FRAME 8) ---
+
+Frame 8: Packet, 260 bytes on wire (2080 bits), 260 bytes captured (2080 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.824289300 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.824289300 UTC
+    Epoch Arrival Time: 1793799739.824289300
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 557.900 microseconds]
+    [Time since reference or first frame: 6.831900 milliseconds]
+    Frame Number: 8
+    Frame Length: 260 bytes (2080 bits)
+    Capture Length: 260 bytes (2080 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 256
+    Identification: 0xd446 (54342)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x27af [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 2222, Dst Port: 55342, Seq: 43, Ack: 34, Len: 216
+    Source Port: 2222
+    Destination Port: 55342
+    [Stream index: 0]
+    [Stream Packet Number: 8]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 216]
+    Sequence Number: 43    (relative sequence number)
+    Sequence Number (raw): 3762068742
+    [Next Sequence Number: 259    (relative sequence number)]
+    Acknowledgment Number: 34    (relative ack number)
+    Acknowledgment number (raw): 2747073851
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0x3aac [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 6.831900 milliseconds]
+        [Time since previous frame in this TCP stream: 557.900 microseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 216]
+        [Bytes sent since last PSH flag: 216]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (216 bytes)
+SSH Protocol
+    SSH Version 2
+        Packet Length: 212
+        Padding Length: 4
+        Key Exchange
+            Message Code: Key Exchange Init (20)
+            Algorithms
+                Cookie: 45ffb83027f15eabfb8edadb3bf7a672
+                kex_algorithms length: 46
+                kex_algorithms string: curve25519-sha256,kex-strict-s-v00@openssh.com
+                server_host_key_algorithms length: 11
+                server_host_key_algorithms string: ssh-ed25519
+                encryption_algorithms_client_to_server length: 10
+                encryption_algorithms_client_to_server string: aes256-ctr
+                encryption_algorithms_server_to_client length: 10
+                encryption_algorithms_server_to_client string: aes256-ctr
+                mac_algorithms_client_to_server length: 13
+                mac_algorithms_client_to_server string: hmac-sha2-256
+                mac_algorithms_server_to_client length: 13
+                mac_algorithms_server_to_client string: hmac-sha2-256
+                compression_algorithms_client_to_server length: 21
+                compression_algorithms_client_to_server string: none,zlib@openssh.com
+                compression_algorithms_server_to_client length: 21
+                compression_algorithms_server_to_client string: none,zlib@openssh.com
+                languages_client_to_server length: 0
+                languages_client_to_server string: 
+                languages_server_to_client length: 0
+                languages_server_to_client string: 
+                First KEX Packet Follows: 0
+                Reserved: 00000000
+                [hasshServerAlgorithms: curve25519-sha256,kex-strict-s-v00@openssh.com;aes256-ctr;hmac-sha2-256;none,zlib@openssh.com]
+                [hasshServer: 2fac0554777f542556a28eca6854f64b]
+        Padding String: 00000000
+        [Sequence number: 0]
+    [Direction: Server to Client]
+
+0000  02 00 00 00 45 00 01 00 d4 46 40 00 80 06 27 af   ....E....F@...'.
+0010  7f 00 00 01 7f 00 00 01 08 ae d8 2e e0 3c 9d 06   .............<..
+0020  a3 bd 05 3b 50 18 00 ff 3a ac 00 00 00 00 00 d4   ...;P...:.......
+0030  04 14 45 ff b8 30 27 f1 5e ab fb 8e da db 3b f7   ..E..0'.^.....;.
+0040  a6 72 00 00 00 2e 63 75 72 76 65 32 35 35 31 39   .r....curve25519
+0050  2d 73 68 61 32 35 36 2c 6b 65 78 2d 73 74 72 69   -sha256,kex-stri
+0060  63 74 2d 73 2d 76 30 30 40 6f 70 65 6e 73 73 68   ct-s-v00@openssh
+0070  2e 63 6f 6d 00 00 00 0b 73 73 68 2d 65 64 32 35   .com....ssh-ed25
+0080  35 31 39 00 00 00 0a 61 65 73 32 35 36 2d 63 74   519....aes256-ct
+0090  72 00 00 00 0a 61 65 73 32 35 36 2d 63 74 72 00   r....aes256-ctr.
+00a0  00 00 0d 68 6d 61 63 2d 73 68 61 32 2d 32 35 36   ...hmac-sha2-256
+00b0  00 00 00 0d 68 6d 61 63 2d 73 68 61 32 2d 32 35   ....hmac-sha2-25
+00c0  36 00 00 00 15 6e 6f 6e 65 2c 7a 6c 69 62 40 6f   6....none,zlib@o
+00d0  70 65 6e 73 73 68 2e 63 6f 6d 00 00 00 15 6e 6f   penssh.com....no
+00e0  6e 65 2c 7a 6c 69 62 40 6f 70 65 6e 73 73 68 2e   ne,zlib@openssh.
+00f0  63 6f 6d 00 00 00 00 00 00 00 00 00 00 00 00 00   com.............
+0100  00 00 00 00                                       ....
+
+--- 4. CLAVE PÚBLICA ED25519 Y CAMBIO A CIFRADO NEWKEYS (FRAMES 12, 14, 16) ---
+
+Frame 12: Packet, 92 bytes on wire (736 bits), 92 bytes captured (736 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.828425700 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.828425700 UTC
+    Epoch Arrival Time: 1793799739.828425700
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 3.559400 milliseconds]
+    [Time since reference or first frame: 10.968300 milliseconds]
+    Frame Number: 12
+    Frame Length: 92 bytes (736 bits)
+    Capture Length: 92 bytes (736 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 88
+    Identification: 0xd44a (54346)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x2853 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 55342, Dst Port: 2222, Seq: 1466, Ack: 259, Len: 48
+    Source Port: 55342
+    Destination Port: 2222
+    [Stream index: 0]
+    [Stream Packet Number: 12]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 48]
+    Sequence Number: 1466    (relative sequence number)
+    Sequence Number (raw): 2747075283
+    [Next Sequence Number: 1514    (relative sequence number)]
+    Acknowledgment Number: 259    (relative ack number)
+    Acknowledgment number (raw): 3762068958
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 254
+    [Calculated window size: 65024]
+    [Window size scaling factor: 256]
+    Checksum: 0x8c87 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 10.968300 milliseconds]
+        [Time since previous frame in this TCP stream: 3.559400 milliseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 48]
+        [Bytes sent since last PSH flag: 48]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (48 bytes)
+SSH Protocol
+    SSH Version 2
+        Packet Length: 44
+        Padding Length: 6
+        Key Exchange (method:curve25519-sha256)
+            Message Code: Elliptic Curve Diffie-Hellman Key Exchange Init (30)
+            ECDH client's ephemeral public key length: 32
+            ECDH client's ephemeral public key (Q_C): 5d4eef4275f6d51878e8bca68cea6431b486fe5ac1d21c2b91d8038d7157ba39
+        Padding String: 000000000000
+        [Sequence number: 1]
+    [Direction: Client to Server]
+
+Frame 14: Packet, 588 bytes on wire (4704 bits), 588 bytes captured (4704 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.830945000 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.830945000 UTC
+    Epoch Arrival Time: 1793799739.830945000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 2.504300 milliseconds]
+    [Time delta from previous displayed frame: 2.519300 milliseconds]
+    [Time since reference or first frame: 13.487600 milliseconds]
+    Frame Number: 14
+    Frame Length: 588 bytes (4704 bits)
+    Capture Length: 588 bytes (4704 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 584
+    Identification: 0xd44c (54348)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x2661 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 2222, Dst Port: 55342, Seq: 259, Ack: 1514, Len: 544
+    Source Port: 2222
+    Destination Port: 55342
+    [Stream index: 0]
+    [Stream Packet Number: 14]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 544]
+    Sequence Number: 259    (relative sequence number)
+    Sequence Number (raw): 3762068958
+    [Next Sequence Number: 803    (relative sequence number)]
+    Acknowledgment Number: 1514    (relative ack number)
+    Acknowledgment number (raw): 2747075331
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 250
+    [Calculated window size: 64000]
+    [Window size scaling factor: 256]
+    Checksum: 0xe0fd [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 13.487600 milliseconds]
+        [Time since previous frame in this TCP stream: 2.504300 milliseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 544]
+        [Bytes sent since last PSH flag: 544]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (544 bytes)
+SSH Protocol
+    SSH Version 2
+        Packet Length: 188
+        Padding Length: 8
+        Key Exchange (method:curve25519-sha256)
+            Message Code: Elliptic Curve Diffie-Hellman Key Exchange Reply (31)
+            KEX host key (type: ssh-ed25519)
+                Host key length: 51
+                Host key type length: 11
+                Host key type: ssh-ed25519
+                EdDSA public key length: 32
+                EdDSA public key: 0523886ca8a8323ff7f5e4410170a9a945b933381148403293e6b128000723a7
+            ECDH server's ephemeral public key length: 32
+            ECDH server's ephemeral public key (Q_S): 1579c9344e75542e81381d586dac881c65332d8525a6fcdb70d5cef05d91dd44
+            KEX host signature (type: ssh-ed25519)
+                Host signature length: 83
+                Host signature type length: 11
+                Host signature type: ssh-ed25519
+                Host signature data: 00000040c807893767e66a2b9c9cf5ea54302f2d7c48bfcb9bf04ee5f7879471ef17049582a1a21092fcff9cfa77c0f03bed9bded700b0ab9d1b5272f6368d03f8ead00a
+        Padding String: 0000000000000000
+        [Sequence number: 1]
+    SSH Version 2 (encryption:aes256-ctr mac:hmac-sha2-256 compression:none)
+        Packet Length: 12
+        Padding Length: 10
+        Key Exchange (method:curve25519-sha256)
+            Message Code: New Keys (21)
+        Padding String: 00000000000000000000
+        [Sequence number: 2]
+    SSH Version 2 (encryption:aes256-ctr mac:hmac-sha2-256 compression:none)
+        Packet Length (encrypted): 05a3f847
+        Encrypted Packet […]: d3844677b7f4659048045df32a546f11b0b6d448695a6c1010ea6db8f6cf07612743056b453b6269a19e80f29862004774fd30585133ee5d794ebcb88c98b97fcf8a82b95b2eb009ec77a44be54ff8f09e84c980958d5d99dfe46c772aacd9f62bcc8a2a7df2048ba198def
+        MAC: 44a061e66411a04dbb225beaf6619a9419e3fa14bd4712db1ed425657795a6b0
+    [Direction: Server to Client]
+
+Frame 16: Packet, 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.834120200 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.834120200 UTC
+    Epoch Arrival Time: 1793799739.834120200
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 3.146000 milliseconds]
+    [Time delta from previous displayed frame: 3.175200 milliseconds]
+    [Time since reference or first frame: 16.662800 milliseconds]
+    Frame Number: 16
+    Frame Length: 60 bytes (480 bits)
+    Capture Length: 60 bytes (480 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 56
+    Identification: 0xd44e (54350)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x286f [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 55342, Dst Port: 2222, Seq: 1514, Ack: 803, Len: 16
+    Source Port: 55342
+    Destination Port: 2222
+    [Stream index: 0]
+    [Stream Packet Number: 16]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 16]
+    Sequence Number: 1514    (relative sequence number)
+    Sequence Number (raw): 2747075331
+    [Next Sequence Number: 1530    (relative sequence number)]
+    Acknowledgment Number: 803    (relative ack number)
+    Acknowledgment number (raw): 3762069502
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 252
+    [Calculated window size: 64512]
+    [Window size scaling factor: 256]
+    Checksum: 0x96c4 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 16.662800 milliseconds]
+        [Time since previous frame in this TCP stream: 3.146000 milliseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 16]
+        [Bytes sent since last PSH flag: 16]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (16 bytes)
+SSH Protocol
+    SSH Version 2 (encryption:aes256-ctr mac:hmac-sha2-256 compression:none)
+        Packet Length: 12
+        Padding Length: 10
+        Key Exchange (method:curve25519-sha256)
+            Message Code: New Keys (21)
+        Padding String: 00000000000000000000
+        [Sequence number: 2]
+    [Direction: Client to Server]
+
+--- 5. PAQUETES CIFRADOS ENCRYPTED PACKET (FRAMES 18 y 20) ---
+
+Frame 18: Packet, 108 bytes on wire (864 bits), 108 bytes captured (864 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.835492400 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.835492400 UTC
+    Epoch Arrival Time: 1793799739.835492400
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 1.356000 milliseconds]
+    [Time since reference or first frame: 18.035000 milliseconds]
+    Frame Number: 18
+    Frame Length: 108 bytes (864 bits)
+    Capture Length: 108 bytes (864 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 104
+    Identification: 0xd450 (54352)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x283d [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 55342, Dst Port: 2222, Seq: 1530, Ack: 803, Len: 64
+    Source Port: 55342
+    Destination Port: 2222
+    [Stream index: 0]
+    [Stream Packet Number: 18]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 64]
+    Sequence Number: 1530    (relative sequence number)
+    Sequence Number (raw): 2747075347
+    [Next Sequence Number: 1594    (relative sequence number)]
+    Acknowledgment Number: 803    (relative ack number)
+    Acknowledgment number (raw): 3762069502
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 252
+    [Calculated window size: 64512]
+    [Window size scaling factor: 256]
+    Checksum: 0xcb99 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 18.035000 milliseconds]
+        [Time since previous frame in this TCP stream: 1.356000 milliseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 64]
+        [Bytes sent since last PSH flag: 64]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (64 bytes)
+SSH Protocol
+    SSH Version 2 (encryption:aes256-ctr mac:hmac-sha2-256 compression:none)
+        Packet Length (encrypted): 8a84c98e
+        Encrypted Packet: d3b4411f7fb49a3f612eed88684205ad01db75b3c3a780d4d0a89296
+        MAC: 9620f535d975c7806ab4260b3ea9d034bdcf8e0cc422542ce6f31d5d8dceb409
+    [Direction: Client to Server]
+
+0000  02 00 00 00 45 00 00 68 d4 50 40 00 80 06 28 3d   ....E..h.P@...(=
+0010  7f 00 00 01 7f 00 00 01 d8 2e 08 ae a3 bd 0b 13   ................
+0020  e0 3c 9f fe 50 18 00 fc cb 99 00 00 8a 84 c9 8e   .<..P...........
+0030  d3 b4 41 1f 7f b4 9a 3f 61 2e ed 88 68 42 05 ad   ..A....?a...hB..
+0040  01 db 75 b3 c3 a7 80 d4 d0 a8 92 96 96 20 f5 35   ..u.......... .5
+0050  d9 75 c7 80 6a b4 26 0b 3e a9 d0 34 bd cf 8e 0c   .u..j.&.>..4....
+0060  c4 22 54 2c e6 f3 1d 5d 8d ce b4 09               ."T,...]....
+
+Frame 20: Packet, 108 bytes on wire (864 bits), 108 bytes captured (864 bits)
+    Encapsulation type: NULL/Loopback (15)
+    Arrival Time: Nov  4, 2026 10:42:19.835954400 Hora verano Sudamérica Pacífico
+    UTC Arrival Time: Nov  4, 2026 13:42:19.835954400 UTC
+    Epoch Arrival Time: 1793799739.835954400
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 448.400 microseconds]
+    [Time delta from previous displayed frame: 462.000 microseconds]
+    [Time since reference or first frame: 18.497000 milliseconds]
+    Frame Number: 20
+    Frame Length: 108 bytes (864 bits)
+    Capture Length: 108 bytes (864 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: null:ip:tcp:ssh]
+    Character encoding: ASCII (0)
+Null/Loopback
+    Family: IP (2)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 104
+    Identification: 0xd452 (54354)
+    010. .... = Flags: 0x2, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x283b [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+    [Stream index: 0]
+Transmission Control Protocol, Src Port: 2222, Dst Port: 55342, Seq: 803, Ack: 1594, Len: 64
+    Source Port: 2222
+    Destination Port: 55342
+    [Stream index: 0]
+    [Stream Packet Number: 20]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 64]
+    Sequence Number: 803    (relative sequence number)
+    Sequence Number (raw): 3762069502
+    [Next Sequence Number: 867    (relative sequence number)]
+    Acknowledgment Number: 1594    (relative ack number)
+    Acknowledgment number (raw): 2747075411
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 249
+    [Calculated window size: 63744]
+    [Window size scaling factor: 256]
+    Checksum: 0x9740 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 18.497000 milliseconds]
+        [Time since previous frame in this TCP stream: 448.400 microseconds]
+    [SEQ/ACK analysis]
+        [iRTT: 81.900 microseconds]
+        [Bytes in flight: 64]
+        [Bytes sent since last PSH flag: 64]
+    [Client Contiguous Streams: 1]
+    [Server Contiguous Streams: 1]
+    TCP payload (64 bytes)
+SSH Protocol
+    SSH Version 2 (encryption:aes256-ctr mac:hmac-sha2-256 compression:none)
+        Packet Length (encrypted): 6cb3e7af
+        Encrypted Packet: 0925b5685092456393d254cdf49e7f05954d8c656b7e4b7d1f5159e4
+        MAC: dda8441e50e35d7b254feb1bbe5029c1474c3be114c8b100d2f03972acaee76d
+    [Direction: Server to Client]
+
+0000  02 00 00 00 45 00 00 68 d4 52 40 00 80 06 28 3b   ....E..h.R@...(;
+0010  7f 00 00 01 7f 00 00 01 08 ae d8 2e e0 3c 9f fe   .............<..
+0020  a3 bd 0b 53 50 18 00 f9 97 40 00 00 6c b3 e7 af   ...SP....@..l...
+0030  09 25 b5 68 50 92 45 63 93 d2 54 cd f4 9e 7f 05   .%.hP.Ec..T.....
+0040  95 4d 8c 65 6b 7e 4b 7d 1f 51 59 e4 dd a8 44 1e   .M.ek~K}.QY...D.
+0050  50 e3 5d 7b 25 4f eb 1b be 50 29 c1 47 4c 3b e1   P.]{%O...P).GL;.
+0060  14 c8 b1 00 d2 f0 39 72 ac ae e7 6d               ......9r...m

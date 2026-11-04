@@ -1,0 +1,31 @@
+# ========================================================
+# Configuración Servidor OpenSSH - Laboratorio 4 Criptografía
+# Algoritmos criptográficos forzados explícitamente:
+#   - KexAlgorithms: curve25519-sha256
+#   - Ciphers: aes256-ctr
+#   - MACs: hmac-sha2-256
+#   - HostKeyAlgorithms / PubkeyAcceptedAlgorithms: ssh-ed25519
+# ========================================================
+
+Port 22
+ListenAddress 0.0.0.0
+
+# Clave privada de host Ed25519
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Algoritmos criptográficos requeridos por la guía y rúbrica
+KexAlgorithms curve25519-sha256
+Ciphers aes256-ctr
+MACs hmac-sha2-256
+HostKeyAlgorithms ssh-ed25519
+PubkeyAcceptedAlgorithms ssh-ed25519
+
+# Parámetros de autenticación y seguridad
+PasswordAuthentication yes
+PubkeyAuthentication yes
+PermitEmptyPasswords no
+PermitRootLogin no
+
+# Nivel de registro y subsistema SFTP
+LogLevel VERBOSE
+Subsystem sftp /usr/lib/openssh/sftp-server

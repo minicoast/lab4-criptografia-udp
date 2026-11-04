@@ -1,0 +1,29 @@
+debug1: Connecting to 127.0.0.1 [127.0.0.1] port 2222.
+debug1: Connection established.
+debug1: Local version string SSH-2.0-OpenSSH_for_Windows_9.5
+debug1: Remote protocol version 2.0, remote software version OpenSSH_8.9p1 Ubuntu-3ubuntu0.18
+debug1: Authenticating to 127.0.0.1:2222 as 'usuario'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com
+debug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256
+debug2: peer server KEXINIT proposal
+debug2: KEX algorithms: curve25519-sha256,kex-strict-s-v00@openssh.com
+debug2: host key algorithms: ssh-ed25519
+debug2: ciphers ctos: aes256-ctr
+debug2: ciphers stoc: aes256-ctr
+debug2: MACs ctos: hmac-sha2-256
+debug2: MACs stoc: hmac-sha2-256
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: aes256-ctr MAC: hmac-sha2-256 compression: none
+debug1: kex: client->server cipher: aes256-ctr MAC: hmac-sha2-256 compression: none
+debug1: Server host key: ssh-ed25519 SHA256:E/jRjCqkaQhDyhdpsZEZJpOo8KCc0yU2WckJ9To/rnY
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+Authenticated to 127.0.0.1 ([127.0.0.1]:2222) using "password".
+debug1: Sending command: whoami && hostname && uname -a
+usuario
+Linux d78fb638f2c4 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+debug1: Exit status 0

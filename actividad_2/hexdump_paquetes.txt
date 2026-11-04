@@ -1,0 +1,749 @@
+==================================================================================
+INSPECCIÓN DE CAPTURA PCAP: transacciones_cifradas.pcap
+Total de tramas en archivo: 41
+==================================================================================
+[+] Paquetes con etiqueta 'RSA_PIN|' identificados : 1
+[+] Paquetes con etiqueta 'AESGCM|' identificados  : 40
+
+----------------------------------------------------------------------------------
+No.   Proto  Origen                Destino               Frame   Payload  Etiqueta
+----------------------------------------------------------------------------------
+1     TCP    10.10.10.10:49152     10.10.10.20:4444      320     280      RSA_PIN|
+2     TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+3     TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+4     TCP    10.10.10.10:49152     10.10.10.20:4444      161     121      AESGCM|
+5     TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+6     TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+7     TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+8     TCP    10.10.10.10:49152     10.10.10.20:4444      161     121      AESGCM|
+9     TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+10    TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+11    TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+12    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+13    TCP    10.10.10.10:49152     10.10.10.20:4444      161     121      AESGCM|
+14    TCP    10.10.10.10:49152     10.10.10.20:4444      156     116      AESGCM|
+15    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+16    TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+17    TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+18    TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+19    TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+20    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+21    TCP    10.10.10.10:49152     10.10.10.20:4444      161     121      AESGCM|
+22    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+23    TCP    10.10.10.10:49152     10.10.10.20:4444      161     121      AESGCM|
+24    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+25    TCP    10.10.10.10:49152     10.10.10.20:4444      157     117      AESGCM|
+26    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+27    TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+28    TCP    10.10.10.10:49152     10.10.10.20:4444      157     117      AESGCM|
+29    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+30    TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+31    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+32    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+33    TCP    10.10.10.10:49152     10.10.10.20:4444      161     121      AESGCM|
+34    TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+35    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+36    TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+37    TCP    10.10.10.10:49152     10.10.10.20:4444      159     119      AESGCM|
+38    TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+39    TCP    10.10.10.10:49152     10.10.10.20:4444      160     120      AESGCM|
+40    TCP    10.10.10.10:49152     10.10.10.20:4444      161     121      AESGCM|
+41    TCP    10.10.10.10:49152     10.10.10.20:4444      158     118      AESGCM|
+----------------------------------------------------------------------------------
+
+==================================================================================
+DETALLE PAQUETE #1 - ETIQUETA RSA_PIN|
+==================================================================================
+Timestamp      : 2026-10-15 15:37:52.945731
+Flujo de red   : 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP)
+Longitud trama : 320 bytes | Payload aplicación: 280 bytes
+Desglose estructural del Payload:
+  [0x0000 - 0x0007] Encabezado ASCII (8 B)     : RSA_PIN| (5253415f50494e7c)
+  [0x0008 - 0x0017] Salt para Scrypt (16 B)    : 1a065da01a70284041b93dd58e988907
+  [0x0018 - 0x0117] Criptograma RSA-2048 (256B): 2e94beb47c1f4ffd21ca429adaf26a5e...54d6f5129ff5d1ebc1c97831a5faa6de
+
+Volcado Hexadecimal / ASCII (Frame completo):
+0000   45 00 01 40 00 01 00 00  40 06 51 86 0a 0a 0a 0a   E..@.... @.Q.....
+0010   0a 0a 0a 14 c0 00 11 5c  00 03 84 e3 00 00 00 00   .......\ ........
+0020   50 18 20 00 38 0d 00 00  52 53 41 5f 50 49 4e 7c   P. .8... RSA_PIN|
+0030   1a 06 5d a0 1a 70 28 40  41 b9 3d d5 8e 98 89 07   ..]..p(@ A.=.....
+0040   2e 94 be b4 7c 1f 4f fd  21 ca 42 9a da f2 6a 5e   ....|.O. !.B...j^
+0050   83 d7 18 67 3c b0 a2 5e  82 fc 8a 27 05 bf 74 6c   ...g<..^ ...'..tl
+0060   bf 40 d9 8c 20 f7 8b c2  73 2e 09 94 cc c6 ba d3   .@.. ... s.......
+0070   13 ad 00 2a 0d af 0c 33  99 95 c7 ea bb 2b ca 1f   ...*...3 .....+..
+0080   79 b6 02 59 f1 22 cd 01  57 42 8f 2e b5 9b ac 29   y..Y.".. WB.....)
+0090   38 8c a4 05 aa 0a 97 62  66 3f df ab f6 61 78 09   8......b f?...ax.
+00a0   f3 35 09 97 3e 99 cb e6  f5 02 fb 4a 84 4c 19 06   .5..>... ...J.L..
+00b0   40 82 24 0a 15 cb b1 53  65 6d a0 b1 74 1f 4e 8a   @.$....S em..t.N.
+00c0   2c 1c 2e 64 53 55 01 ac  1f 19 fd 3f 37 ad 21 02   ,..dSU.. ...?7.!.
+00d0   63 6d e0 5c 65 26 bf 84  6c 74 81 26 57 e6 07 3b   cm.\e&.. lt.&W..;
+00e0   ff d5 88 d9 3c 04 1c bc  38 be 55 ab da c6 39 a0   ....<... 8.U...9.
+00f0   1a c2 0e 5c 3b 58 c2 34  c8 78 65 3c ee d7 a7 b0   ...\;X.4 .xe<....
+0100   ad 69 10 d9 e1 ce 5c bc  73 4a b7 ad 2e b4 c2 88   .i....\. sJ......
+0110   7b f8 84 28 b3 40 49 29  ea 91 59 83 1b 6b 49 13   {..(.@I) ..Y..kI.
+0120   3a bc 6f 11 21 ff 56 0c  8d 97 4e 4d c7 65 a3 27   :.o.!.V. ..NM.e.'
+0130   54 d6 f5 12 9f f5 d1 eb  c1 c9 78 31 a5 fa a6 de   T....... ..x1....
+
+Volcado Hexadecimal / ASCII (Payload de aplicación RSA_PIN|):
+0000   52 53 41 5f 50 49 4e 7c  1a 06 5d a0 1a 70 28 40   RSA_PIN| ..]..p(@
+0010   41 b9 3d d5 8e 98 89 07  2e 94 be b4 7c 1f 4f fd   A.=..... ....|.O.
+0020   21 ca 42 9a da f2 6a 5e  83 d7 18 67 3c b0 a2 5e   !.B...j^ ...g<..^
+0030   82 fc 8a 27 05 bf 74 6c  bf 40 d9 8c 20 f7 8b c2   ...'..tl .@.. ...
+0040   73 2e 09 94 cc c6 ba d3  13 ad 00 2a 0d af 0c 33   s....... ...*...3
+0050   99 95 c7 ea bb 2b ca 1f  79 b6 02 59 f1 22 cd 01   .....+.. y..Y."..
+0060   57 42 8f 2e b5 9b ac 29  38 8c a4 05 aa 0a 97 62   WB.....) 8......b
+0070   66 3f df ab f6 61 78 09  f3 35 09 97 3e 99 cb e6   f?...ax. .5..>...
+0080   f5 02 fb 4a 84 4c 19 06  40 82 24 0a 15 cb b1 53   ...J.L.. @.$....S
+0090   65 6d a0 b1 74 1f 4e 8a  2c 1c 2e 64 53 55 01 ac   em..t.N. ,..dSU..
+00a0   1f 19 fd 3f 37 ad 21 02  63 6d e0 5c 65 26 bf 84   ...?7.!. cm.\e&..
+00b0   6c 74 81 26 57 e6 07 3b  ff d5 88 d9 3c 04 1c bc   lt.&W..; ....<...
+00c0   38 be 55 ab da c6 39 a0  1a c2 0e 5c 3b 58 c2 34   8.U...9. ...\;X.4
+00d0   c8 78 65 3c ee d7 a7 b0  ad 69 10 d9 e1 ce 5c bc   .xe<.... .i....\.
+00e0   73 4a b7 ad 2e b4 c2 88  7b f8 84 28 b3 40 49 29   sJ...... {..(.@I)
+00f0   ea 91 59 83 1b 6b 49 13  3a bc 6f 11 21 ff 56 0c   ..Y..kI. :.o.!.V.
+0100   8d 97 4e 4d c7 65 a3 27  54 d6 f5 12 9f f5 d1 eb   ..NM.e.' T.......
+0110   c1 c9 78 31 a5 fa a6 de                            ..x1....
+
+==================================================================================
+DETALLE DE LOS 40 PAQUETES CON ETIQUETA AESGCM|
+==================================================================================
+
+--- Transacción Cifrada #01 (Frame #2) ---
+Timestamp: 2026-10-15 15:37:52.946254 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 2f0f7c0cec6fc6216066c11e
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 3af7b79dc7be39afbbfb6988e7c3ce09...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 6f6812d39bd45875e789fe6b5f0e7753
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 2f  0f 7c 0c ec 6f c6 21 60   AESGCM|/ .|..o.!`
+0010   66 c1 1e 3a f7 b7 9d c7  be 39 af bb fb 69 88 e7   f..:.... .9...i..
+0020   c3 ce 09 08 86 95 b5 a9  50 f8 04 4a 56 5d d4 de   ........ P..JV]..
+0030   02 2c 97 f4 b8 b7 60 0d  dd b1 bb d0 a3 e0 7c 3f   .,....`. ......|?
+0040   1d 39 3a 98 c0 0d 7a 14  a5 c0 08 49 1a a4 5e 9d   .9:...z. ...I..^.
+0050   fc e5 fc 5a 57 c8 19 c4  ff 05 e9 35 83 aa 2c 14   ...ZW... ...5..,.
+0060   63 f2 39 61 d6 99 b9 6f  68 12 d3 9b d4 58 75 e7   c.9a...o h....Xu.
+0070   89 fe 6b 5f 0e 77 53                               ..k_.wS
+
+--- Transacción Cifrada #02 (Frame #3) ---
+Timestamp: 2026-10-15 15:37:52.946725 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : f5c032c5c3baf74914c18aa1
+  [0x0013 - 0x0067] Ciphertext (85 B)      : 1b0f41aae8e9b2e9cb44e67572c66a7d...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : 24c195b06f67858734084884c756c0c5
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c f5  c0 32 c5 c3 ba f7 49 14   AESGCM|. .2....I.
+0010   c1 8a a1 1b 0f 41 aa e8  e9 b2 e9 cb 44 e6 75 72   .....A.. ....D.ur
+0020   c6 6a 7d 07 2e 65 0c 96  59 35 3d 13 71 c3 57 5e   .j}..e.. Y5=.q.W^
+0030   e3 30 1d 9d d1 34 34 cd  e1 2a 0e e7 ea ce 92 53   .0...44. .*.....S
+0040   01 4e 11 5c 3f 3e e9 85  18 d5 04 91 c9 8d 3a 56   .N.\?>.. ......:V
+0050   a8 5a 25 4e 78 bf 4b 58  b5 db 57 99 c2 9b c9 fd   .Z%Nx.KX ..W.....
+0060   36 a3 7a e0 7b 29 7b b0  24 c1 95 b0 6f 67 85 87   6.z.{){. $...og..
+0070   34 08 48 84 c7 56 c0 c5                            4.H..V..
+
+--- Transacción Cifrada #03 (Frame #4) ---
+Timestamp: 2026-10-15 15:37:52.947160 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 161 B | Payload: 121 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : f1826a6757626bcfabfe448f
+  [0x0013 - 0x0068] Ciphertext (86 B)      : ebf36ac589429eb319c7d0139bcf9758...
+  [0x0069 - 0x0078] GCM Auth Tag (16 B)    : f2bdac2a6e3dde4dbdfe6edd94812c3c
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c f1  82 6a 67 57 62 6b cf ab   AESGCM|. .jgWbk..
+0010   fe 44 8f eb f3 6a c5 89  42 9e b3 19 c7 d0 13 9b   .D...j.. B.......
+0020   cf 97 58 4e 24 e4 9a 8f  1d 96 4a 36 f6 e2 ee 25   ..XN$... ..J6...%
+0030   36 55 3f c7 83 a5 96 05  2c 9b 76 2d a6 d6 a6 6d   6U?..... ,.v-...m
+0040   4f 70 48 fc 10 fb bc 4f  1d 77 e0 2e 0a 78 14 4c   OpH....O .w...x.L
+0050   40 ed f1 9c 11 90 ca a5  f4 6b fd 31 96 5a b4 f2   @....... .k.1.Z..
+0060   2e c8 63 3d e6 69 02 94  f2 f2 bd ac 2a 6e 3d de   ..c=.i.. ....*n=.
+0070   4d bd fe 6e dd 94 81 2c  3c                        M..n..., <
+
+--- Transacción Cifrada #04 (Frame #5) ---
+Timestamp: 2026-10-15 15:37:52.947585 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 0b962c7d9fe06f7ae2c9a283
+  [0x0013 - 0x0067] Ciphertext (85 B)      : b18fccaab04827150e1deb82a2025237...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : 94a473146331934dca1784e1065d1b9a
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 0b  96 2c 7d 9f e0 6f 7a e2   AESGCM|. .,}..oz.
+0010   c9 a2 83 b1 8f cc aa b0  48 27 15 0e 1d eb 82 a2   ........ H'......
+0020   02 52 37 cf ab 9c 1e 42  12 da dc 77 e7 d1 50 1b   .R7....B ...w..P.
+0030   b5 4c 30 3e a5 6a cf c5  23 42 71 ef d5 fb a1 d6   .L0>.j.. #Bq.....
+0040   79 67 a5 fe a3 e0 57 6f  91 87 28 ed 41 4a f2 11   yg....Wo ..(.AJ..
+0050   6f a2 7c ed 3f 4e 5d 8b  76 2d 7c af 55 bd 19 e4   o.|.?N]. v-|.U...
+0060   37 8e c6 e5 d4 82 0e 8b  94 a4 73 14 63 31 93 4d   7....... ..s.c1.M
+0070   ca 17 84 e1 06 5d 1b 9a                            .....]..
+
+--- Transacción Cifrada #05 (Frame #6) ---
+Timestamp: 2026-10-15 15:37:52.948044 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 458423deb5c4dd3ee962243d
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 316e4d44d6c8e25c7dfb0077b7162841...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : cbced070bccfcc0d6fffb032ab02070a
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 45  84 23 de b5 c4 dd 3e e9   AESGCM|E .#....>.
+0010   62 24 3d 31 6e 4d 44 d6  c8 e2 5c 7d fb 00 77 b7   b$=1nMD. ..\}..w.
+0020   16 28 41 d3 64 8d 80 bf  70 d2 9c 0a 09 f7 d4 83   .(A.d... p.......
+0030   3b bb c7 2a 4d f8 e4 2a  4b a5 b6 f4 25 bf 73 9f   ;..*M..* K...%.s.
+0040   3d 9c 92 94 8a 7d 69 0e  39 b4 39 65 1e 35 b6 04   =....}i. 9.9e.5..
+0050   cb cf 20 43 2b f4 60 4a  81 87 ff 44 15 12 8d 9c   .. C+.`J ...D....
+0060   d9 6c fa c0 28 ef 02 cb  ce d0 70 bc cf cc 0d 6f   .l..(... ..p....o
+0070   ff b0 32 ab 02 07 0a                               ..2....
+
+--- Transacción Cifrada #06 (Frame #7) ---
+Timestamp: 2026-10-15 15:37:52.948407 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 17ce6a392177c70d9b2037ee
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 615accf213ef5e2933d171f94f62819e...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 206d13bfc4ed6bb94db11d5ee52c643c
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 17  ce 6a 39 21 77 c7 0d 9b   AESGCM|. .j9!w...
+0010   20 37 ee 61 5a cc f2 13  ef 5e 29 33 d1 71 f9 4f    7.aZ... .^)3.q.O
+0020   62 81 9e e2 62 3a 1f 40  1c a4 e8 d6 a2 f5 97 73   b...b:.@ .......s
+0030   19 52 ae f5 74 08 51 45  10 2b f4 d1 3a 27 da 0e   .R..t.QE .+..:'..
+0040   2b 1d 3c 0e c8 f0 cb 4d  e6 8d 41 b1 bc d6 30 17   +.<....M ..A...0.
+0050   4b ef a3 49 9e 43 c4 39  9d 55 5d 02 8a 28 49 04   K..I.C.9 .U]..(I.
+0060   56 1a a8 7c 27 b7 5f 20  6d 13 bf c4 ed 6b b9 4d   V..|'._  m....k.M
+0070   b1 1d 5e e5 2c 64 3c                               ..^.,d<
+
+--- Transacción Cifrada #07 (Frame #8) ---
+Timestamp: 2026-10-15 15:37:52.948801 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 161 B | Payload: 121 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : d5a2726555cd5ec4b361c263
+  [0x0013 - 0x0068] Ciphertext (86 B)      : 17b9b9b1495cbc955ccaa05cedfdf4ac...
+  [0x0069 - 0x0078] GCM Auth Tag (16 B)    : 1b14e883cc280ac489fe2715cb57e3a6
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c d5  a2 72 65 55 cd 5e c4 b3   AESGCM|. .reU.^..
+0010   61 c2 63 17 b9 b9 b1 49  5c bc 95 5c ca a0 5c ed   a.c....I \..\..\.
+0020   fd f4 ac 7f 6a 56 b8 0f  f1 1d 28 3a c4 4f 2b 89   ....jV.. ..(:.O+.
+0030   08 cd 89 e0 e0 8c 26 89  d9 60 f1 d6 ad 8a 8c 10   ......&. .`......
+0040   1c 38 ba b6 3f 47 66 20  d8 13 b3 d8 8b a7 3c 43   .8..?Gf  ......<C
+0050   19 ec 6e 96 8f 73 4b 1e  75 89 13 4b 5d e4 60 34   ..n..sK. u..K].`4
+0060   53 d4 45 17 c7 fa 7b c2  6c 1b 14 e8 83 cc 28 0a   S.E...{. l.....(.
+0070   c4 89 fe 27 15 cb 57 e3  a6                        ...'..W. .
+
+--- Transacción Cifrada #08 (Frame #9) ---
+Timestamp: 2026-10-15 15:37:52.949183 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 7d24d0fb28904d84cc8a0f40
+  [0x0013 - 0x0065] Ciphertext (83 B)      : 0aed84f131b372f5dfd67acc36993c2d...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : 6061e49f293ff726753e292bb21b64fd
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 7d  24 d0 fb 28 90 4d 84 cc   AESGCM|} $..(.M..
+0010   8a 0f 40 0a ed 84 f1 31  b3 72 f5 df d6 7a cc 36   ..@....1 .r...z.6
+0020   99 3c 2d b8 d9 22 55 0d  49 21 2a ad 95 c4 6c 0d   .<-.."U. I!*...l.
+0030   fd 36 a6 b1 47 95 19 15  de 7b 61 13 42 aa b0 2e   .6..G... .{a.B...
+0040   59 6b b7 2b 08 c9 a6 22  30 9f f1 d2 b4 e2 2d 58   Yk.+..." 0.....-X
+0050   7c 9e c3 b0 c8 1a 7a 23  e0 fd eb 44 de 8c 2b e0   |.....z# ...D..+.
+0060   6a 75 e8 fd 61 9a 60 61  e4 9f 29 3f f7 26 75 3e   ju..a.`a ..)?.&u>
+0070   29 2b b2 1b 64 fd                                  )+..d.
+
+--- Transacción Cifrada #09 (Frame #10) ---
+Timestamp: 2026-10-15 15:37:52.949537 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 55b1db0ffb5babd675688b1d
+  [0x0013 - 0x0065] Ciphertext (83 B)      : 8b0f48ae5fbca26a840232a275c5478e...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : 8d7b068d655529eb5b560b3a25da9b1b
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 55  b1 db 0f fb 5b ab d6 75   AESGCM|U ....[..u
+0010   68 8b 1d 8b 0f 48 ae 5f  bc a2 6a 84 02 32 a2 75   h....H._ ..j..2.u
+0020   c5 47 8e 19 7f 7a de 35  17 08 1d b0 e9 02 a9 84   .G...z.5 ........
+0030   d8 13 1e 27 64 c2 37 35  29 a7 52 ba c7 a9 1b 7a   ...'d.75 ).R....z
+0040   1a 50 5f 72 eb 7f f7 92  e4 90 09 74 bb 61 d1 4f   .P_r.... ...t.a.O
+0050   4a a8 87 39 f7 dc 3a fb  79 63 45 2c eb c4 08 0e   J..9..:. ycE,....
+0060   c1 77 73 20 f2 93 8d 7b  06 8d 65 55 29 eb 5b 56   .ws ...{ ..eU).[V
+0070   0b 3a 25 da 9b 1b                                  .:%...
+
+--- Transacción Cifrada #10 (Frame #11) ---
+Timestamp: 2026-10-15 15:37:52.949853 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 7c94d0f6caa9e30b96c4e420
+  [0x0013 - 0x0067] Ciphertext (85 B)      : 32e48b19271bbdc1375baad88dd617d0...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : b0cd04615baddb9c82cabe652d39e1bb
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 7c  94 d0 f6 ca a9 e3 0b 96   AESGCM|| ........
+0010   c4 e4 20 32 e4 8b 19 27  1b bd c1 37 5b aa d8 8d   .. 2...' ...7[...
+0020   d6 17 d0 80 4e da da 3c  e2 10 8f 7a dc b9 12 f7   ....N..< ...z....
+0030   f3 61 8c 16 32 fb ee 3e  9b ab d2 31 14 b8 b6 4c   .a..2..> ...1...L
+0040   c2 8a 1b 97 63 58 bb 6e  04 62 25 db 76 6a 0c 13   ....cX.n .b%.vj..
+0050   ae 5a 9b 86 c9 55 60 fd  ce 53 ea 06 91 c8 51 c0   .Z...U`. .S....Q.
+0060   12 97 3a 75 2d 9b 49 29  b0 cd 04 61 5b ad db 9c   ..:u-.I) ...a[...
+0070   82 ca be 65 2d 39 e1 bb                            ...e-9..
+
+--- Transacción Cifrada #11 (Frame #12) ---
+Timestamp: 2026-10-15 15:37:52.950256 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : c615a68c01423c38316bf2ba
+  [0x0013 - 0x0066] Ciphertext (84 B)      : dfb0a5d5ef344debbe7120e1e1cb28f1...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : bee12620e28509b2eef9d610083229a9
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c c6  15 a6 8c 01 42 3c 38 31   AESGCM|. ....B<81
+0010   6b f2 ba df b0 a5 d5 ef  34 4d eb be 71 20 e1 e1   k....... 4M..q ..
+0020   cb 28 f1 71 e5 a4 60 96  84 eb 7f 73 80 3a b3 62   .(.q..`. ...s.:.b
+0030   66 23 c8 f9 db 3f 80 65  71 85 63 c9 3b 9b e0 cf   f#...?.e q.c.;...
+0040   c1 42 8b 99 a8 7b a6 39  a4 8d 7e ee ce b7 b9 e0   .B...{.9 ..~.....
+0050   ce 7b 5a 85 aa 88 3a 70  1a 7a 7c 63 25 5a 55 4c   .{Z...:p .z|c%ZUL
+0060   43 f7 e7 3c 50 81 fc be  e1 26 20 e2 85 09 b2 ee   C..<P... .& .....
+0070   f9 d6 10 08 32 29 a9                               ....2).
+
+--- Transacción Cifrada #12 (Frame #13) ---
+Timestamp: 2026-10-15 15:37:52.950567 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 161 B | Payload: 121 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : a5e11a5f032d4bfea65eadc9
+  [0x0013 - 0x0068] Ciphertext (86 B)      : a29c5672085ca0e194468b97715fea74...
+  [0x0069 - 0x0078] GCM Auth Tag (16 B)    : 0a75c907c43b24df58a17e5060b1d2af
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c a5  e1 1a 5f 03 2d 4b fe a6   AESGCM|. .._.-K..
+0010   5e ad c9 a2 9c 56 72 08  5c a0 e1 94 46 8b 97 71   ^....Vr. \...F..q
+0020   5f ea 74 c8 92 ca ba 4e  75 e9 ac 49 88 11 a7 5d   _.t....N u..I...]
+0030   18 2f d4 74 9b 4f a4 3a  38 4e fb dc 0a 91 82 5e   ./.t.O.: 8N.....^
+0040   9a 7e 3d 19 5a fa 86 7b  69 17 10 61 73 7d 64 5c   .~=.Z..{ i..as}d\
+0050   88 b3 8c 09 e8 27 d4 1f  a1 dc e4 9e 3c b9 13 76   .....'.. ....<..v
+0060   a1 72 69 5e be 3d ee 5a  16 0a 75 c9 07 c4 3b 24   .ri^.=.Z ..u...;$
+0070   df 58 a1 7e 50 60 b1 d2  af                        .X.~P`.. .
+
+--- Transacción Cifrada #13 (Frame #14) ---
+Timestamp: 2026-10-15 15:37:52.951095 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 156 B | Payload: 116 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 6a8e9fc89912e5ad14c3a5f2
+  [0x0013 - 0x0063] Ciphertext (81 B)      : 7273c7a7dc80f042565c04afd9a79b3d...
+  [0x0064 - 0x0073] GCM Auth Tag (16 B)    : dd856598005793e5073c1161d838578d
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 6a  8e 9f c8 99 12 e5 ad 14   AESGCM|j ........
+0010   c3 a5 f2 72 73 c7 a7 dc  80 f0 42 56 5c 04 af d9   ...rs... ..BV\...
+0020   a7 9b 3d 03 18 6f 8d c5  c0 d6 85 0d da 94 fd 5b   ..=..o.. .......[
+0030   c1 a3 c9 0f d1 a3 0f 14  53 99 33 db 60 24 a1 d2   ........ S.3.`$..
+0040   11 8b a0 fb 26 13 74 24  ee 3c de ff fe ac 8e de   ....&.t$ .<......
+0050   78 bb 04 06 db 1a ca a9  5f e5 bc e9 a4 b6 47 66   x....... _.....Gf
+0060   3d 1b 90 74 dd 85 65 98  00 57 93 e5 07 3c 11 61   =..t..e. .W...<.a
+0070   d8 38 57 8d                                        .8W.
+
+--- Transacción Cifrada #14 (Frame #15) ---
+Timestamp: 2026-10-15 15:37:52.951503 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 2981371633a1942d8e142fbd
+  [0x0013 - 0x0066] Ciphertext (84 B)      : b6045bc54cda239c40b57a7e00173f30...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : a305a62be381a9ad45511c437d494bb0
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 29  81 37 16 33 a1 94 2d 8e   AESGCM|) .7.3..-.
+0010   14 2f bd b6 04 5b c5 4c  da 23 9c 40 b5 7a 7e 00   ./...[.L .#.@.z~.
+0020   17 3f 30 2f 78 59 95 14  4b a0 95 34 35 b6 20 cd   .?0/xY.. K..45. .
+0030   ae 5e 4e 84 78 e8 21 65  b1 f4 ff 3f 10 6e 50 cb   .^N.x.!e ...?.nP.
+0040   39 2f 8d 1a ef a9 31 95  d7 ff aa 93 57 0a 91 f7   9/....1. ....W...
+0050   ca c1 5e 77 7e 89 fe 6e  8e 27 a3 7c 40 59 22 b9   ..^w~..n .'.|@Y".
+0060   dc 01 34 d7 b2 7d 1e a3  05 a6 2b e3 81 a9 ad 45   ..4..}.. ..+....E
+0070   51 1c 43 7d 49 4b b0                               Q.C}IK.
+
+--- Transacción Cifrada #15 (Frame #16) ---
+Timestamp: 2026-10-15 15:37:52.952016 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 559a043f24dc6df589941434
+  [0x0013 - 0x0067] Ciphertext (85 B)      : 27249a661c71f9d42561f87913b2bcf4...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : c16fe0b4ee18d899525ed5a9e6e4e583
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 55  9a 04 3f 24 dc 6d f5 89   AESGCM|U ..?$.m..
+0010   94 14 34 27 24 9a 66 1c  71 f9 d4 25 61 f8 79 13   ..4'$.f. q..%a.y.
+0020   b2 bc f4 92 9c 2b 0e e6  3f fb a1 1f 9d 28 13 f3   .....+.. ?....(..
+0030   36 b2 11 a4 92 02 4c 05  a2 89 e3 fd f5 eb a1 be   6.....L. ........
+0040   a9 0c d6 59 b1 d8 b7 5d  42 d4 07 3e 18 ec 61 50   ...Y...] B..>..aP
+0050   86 84 a5 be 5b 79 8b bf  35 69 e9 8c 9e d0 d5 39   ....[y.. 5i.....9
+0060   fd 56 18 b8 23 ab a3 2b  c1 6f e0 b4 ee 18 d8 99   .V..#..+ .o......
+0070   52 5e d5 a9 e6 e4 e5 83                            R^......
+
+--- Transacción Cifrada #16 (Frame #17) ---
+Timestamp: 2026-10-15 15:37:52.952445 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : b042fd8ac3f578627f2ac139
+  [0x0013 - 0x0065] Ciphertext (83 B)      : 30756efc4cb97ae59eaf700debfdc4a4...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : a6e7baf30cc6398ef70c5f6f5c1a8a17
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c b0  42 fd 8a c3 f5 78 62 7f   AESGCM|. B....xb.
+0010   2a c1 39 30 75 6e fc 4c  b9 7a e5 9e af 70 0d eb   *.90un.L .z...p..
+0020   fd c4 a4 0b 72 59 dc 97  d0 62 dd f5 44 9a 02 cb   ....rY.. .b..D...
+0030   fb 56 b1 6c 41 dc e2 c0  f9 9e f6 7e 78 ec 55 9b   .V.lA... ...~x.U.
+0040   ab 72 f0 81 b4 be 30 49  1f 17 56 7c ed 1f ac c0   .r....0I ..V|....
+0050   c4 08 70 80 d9 9d d7 30  c5 16 c8 cf a8 bf aa 24   ..p....0 .......$
+0060   ed e1 e0 cb 82 ea a6 e7  ba f3 0c c6 39 8e f7 0c   ........ ....9...
+0070   5f 6f 5c 1a 8a 17                                  _o\...
+
+--- Transacción Cifrada #17 (Frame #18) ---
+Timestamp: 2026-10-15 15:37:52.952854 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 186f60e5c43192089132324f
+  [0x0013 - 0x0067] Ciphertext (85 B)      : e3d0c3eaa970e0ab0b5d2c048504be2e...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : 39f24f6caf02bf766ed8b73d8d12abdd
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 18  6f 60 e5 c4 31 92 08 91   AESGCM|. o`..1...
+0010   32 32 4f e3 d0 c3 ea a9  70 e0 ab 0b 5d 2c 04 85   22O..... p...],..
+0020   04 be 2e e4 2b ea 36 a6  cb a3 6e 17 28 3e 48 2a   ....+.6. ..n.(>H*
+0030   fe f7 42 c0 0b 7d 3b be  9a 3d 54 b7 51 9b e5 d2   ..B..};. .=T.Q...
+0040   79 de 6e b7 56 68 62 78  dc 52 78 a9 0e 7c 0c bf   y.n.Vhbx .Rx..|..
+0050   31 8e 24 d5 2f 3d a6 41  b4 a1 23 90 14 aa 70 b7   1.$./=.A ..#...p.
+0060   0c 6d 10 5e 51 76 54 5d  39 f2 4f 6c af 02 bf 76   .m.^QvT] 9.Ol...v
+0070   6e d8 b7 3d 8d 12 ab dd                            n..=....
+
+--- Transacción Cifrada #18 (Frame #19) ---
+Timestamp: 2026-10-15 15:37:52.953500 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 5c29e076a5d9c3de7a3bab28
+  [0x0013 - 0x0065] Ciphertext (83 B)      : 675691ed47a36377ea17ceea44e4214a...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : cb3df4b40018c1ab5f8de081480710b1
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 5c  29 e0 76 a5 d9 c3 de 7a   AESGCM|\ ).v....z
+0010   3b ab 28 67 56 91 ed 47  a3 63 77 ea 17 ce ea 44   ;.(gV..G .cw....D
+0020   e4 21 4a be 82 08 22 10  38 05 8a 52 d5 66 b5 ea   .!J...". 8..R.f..
+0030   48 f0 c8 f4 1f e1 82 d7  d5 f8 f4 00 51 6b 74 51   H....... ....QktQ
+0040   cf 50 e3 14 43 14 cb 29  09 20 5f ec fe f4 e3 44   .P..C..) . _....D
+0050   8d 3a 82 55 de 5e 5f 04  68 f2 79 d0 ae 88 99 6c   .:.U.^_. h.y....l
+0060   48 fa f8 ef 52 a8 cb 3d  f4 b4 00 18 c1 ab 5f 8d   H...R..= ......_.
+0070   e0 81 48 07 10 b1                                  ..H...
+
+--- Transacción Cifrada #19 (Frame #20) ---
+Timestamp: 2026-10-15 15:37:52.953918 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 1a4ddf05bef0ab1df4034fd1
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 9dbe89fd31a90dda2c13b77077d06df8...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 3d7718cfc1435e222bc49228aee45459
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 1a  4d df 05 be f0 ab 1d f4   AESGCM|. M.......
+0010   03 4f d1 9d be 89 fd 31  a9 0d da 2c 13 b7 70 77   .O.....1 ...,..pw
+0020   d0 6d f8 25 2a 19 4d d6  bd 71 76 f7 cb 2c b2 3e   .m.%*.M. .qv..,.>
+0030   33 d0 1c 61 5b cd 43 47  f4 b0 20 b1 48 9b 51 42   3..a[.CG .. .H.QB
+0040   5f 84 7f dd eb 70 fa 67  89 ef 84 6b a6 86 25 19   _....p.g ...k..%.
+0050   85 0e 15 f6 99 f8 ac 8a  4d 6d 68 be c7 38 76 3c   ........ Mmh..8v<
+0060   e2 a1 57 a9 a3 5e 79 3d  77 18 cf c1 43 5e 22 2b   ..W..^y= w...C^"+
+0070   c4 92 28 ae e4 54 59                               ..(..TY
+
+--- Transacción Cifrada #20 (Frame #21) ---
+Timestamp: 2026-10-15 15:37:52.954275 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 161 B | Payload: 121 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : a88ad7b0857ba22ac08986d2
+  [0x0013 - 0x0068] Ciphertext (86 B)      : 8af940c979087480d5a60c7916ba0c43...
+  [0x0069 - 0x0078] GCM Auth Tag (16 B)    : e54b55624f61d96badb9c5b77537ba2a
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c a8  8a d7 b0 85 7b a2 2a c0   AESGCM|. ....{.*.
+0010   89 86 d2 8a f9 40 c9 79  08 74 80 d5 a6 0c 79 16   .....@.y .t....y.
+0020   ba 0c 43 7c 91 3d 30 b9  8e 02 cb 54 c7 07 59 38   ..C|.=0. ...T..Y8
+0030   37 3f 88 ea 3e 4d 93 8e  73 63 d7 1a 2d 1f 8b 6d   7?..>M.. sc..-..m
+0040   5a f8 7e 50 85 07 20 9f  b9 2e c4 94 f2 d7 14 7a   Z.~P.. . .......z
+0050   d6 45 21 9e 80 3a 78 35  c7 97 1a 1d d7 1d 3d a2   .E!..:x5 ......=.
+0060   33 19 b5 94 58 37 78 a6  2f e5 4b 55 62 4f 61 d9   3...X7x. /.KUbOa.
+0070   6b ad b9 c5 b7 75 37 ba  2a                        k....u7. *
+
+--- Transacción Cifrada #21 (Frame #22) ---
+Timestamp: 2026-10-15 15:37:52.954610 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : f98fec685d05bc5f42006640
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 45e6c8b6a3f9ebd8dc473a553cce5c10...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 4ba416149fc300c8737641e6bb6964e9
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c f9  8f ec 68 5d 05 bc 5f 42   AESGCM|. ..h].._B
+0010   00 66 40 45 e6 c8 b6 a3  f9 eb d8 dc 47 3a 55 3c   .f@E.... ....G:U<
+0020   ce 5c 10 bc 96 da 5d ad  6d ba 4a 21 ad 5a ae 85   .\....]. m.J!.Z..
+0030   bc 25 68 64 4b bd b5 07  ba 24 cf d2 ed 97 36 97   .%hdK... .$....6.
+0040   43 a0 1a 62 d6 49 13 f9  2d 75 f0 14 ea 6b 36 7f   C..b.I.. -u...k6.
+0050   ec 5d 00 00 2d 1a 32 de  f8 23 f3 8a 66 a2 70 ac   .]..-.2. .#..f.p.
+0060   5c 41 b5 da 1d 4e b1 4b  a4 16 14 9f c3 00 c8 73   \A...N.K .......s
+0070   76 41 e6 bb 69 64 e9                               vA..id.
+
+--- Transacción Cifrada #22 (Frame #23) ---
+Timestamp: 2026-10-15 15:37:52.954953 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 161 B | Payload: 121 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 384a3b775fded04d68925e21
+  [0x0013 - 0x0068] Ciphertext (86 B)      : c681ef1bf7e0d4447a4993479ab29e46...
+  [0x0069 - 0x0078] GCM Auth Tag (16 B)    : 7362bcd87409b2926881bc1bccbf4394
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 38  4a 3b 77 5f de d0 4d 68   AESGCM|8 J;w_..Mh
+0010   92 5e 21 c6 81 ef 1b f7  e0 d4 44 7a 49 93 47 9a   .^!..... ..DzI.G.
+0020   b2 9e 46 ef 03 e4 34 43  66 8b d1 ce cb 8b f5 3f   ..F...4C f......?
+0030   b9 c7 d5 1e 2a a0 b2 cc  48 a4 f7 7d 37 10 0e 56   ....*... H..}7..V
+0040   39 88 1a 8d c4 74 d2 d5  e5 3e fc 84 80 8d 5d c7   9....t.. .>....].
+0050   1f bc 51 eb 52 b3 ea 67  f7 f6 68 2a fa 0e 85 a0   ..Q.R..g ..h*....
+0060   4d 45 b3 3e 22 fc b7 ff  ea 73 62 bc d8 74 09 b2   ME.>"... .sb..t..
+0070   92 68 81 bc 1b cc bf 43  94                        .h.....C .
+
+--- Transacción Cifrada #23 (Frame #24) ---
+Timestamp: 2026-10-15 15:37:52.955292 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 26a94dc4188b7b1e2c4abc32
+  [0x0013 - 0x0066] Ciphertext (84 B)      : dfaea9c457a6006a4dcd90bb0ec582b9...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : efc16000aeef3f79ca7bbda2179be1fc
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 26  a9 4d c4 18 8b 7b 1e 2c   AESGCM|& .M...{.,
+0010   4a bc 32 df ae a9 c4 57  a6 00 6a 4d cd 90 bb 0e   J.2....W ..jM....
+0020   c5 82 b9 aa 55 16 6f e7  24 ad 05 c3 78 04 38 57   ....U.o. $...x.8W
+0030   e7 6f 98 00 76 b5 7c 56  ed 0e f1 b0 31 1b 29 7b   .o..v.|V ....1.){
+0040   70 93 1f d0 64 43 b5 b0  e4 78 67 07 c8 5d f1 20   p...dC.. .xg..].
+0050   d8 ac 1c b1 a4 fd f7 9f  64 ab 9c c5 16 8b 57 4d   ........ d.....WM
+0060   fd e2 9c 47 cb 89 1d ef  c1 60 00 ae ef 3f 79 ca   ...G.... .`...?y.
+0070   7b bd a2 17 9b e1 fc                               {......
+
+--- Transacción Cifrada #24 (Frame #25) ---
+Timestamp: 2026-10-15 15:37:52.955595 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 157 B | Payload: 117 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 95efe5eb09c2d7abd3db43eb
+  [0x0013 - 0x0064] Ciphertext (82 B)      : c9c5e5f0c82a74162b2b2583f9750df2...
+  [0x0065 - 0x0074] GCM Auth Tag (16 B)    : a791b1f01a00985d20343c2e59989ada
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 95  ef e5 eb 09 c2 d7 ab d3   AESGCM|. ........
+0010   db 43 eb c9 c5 e5 f0 c8  2a 74 16 2b 2b 25 83 f9   .C...... *t.++%..
+0020   75 0d f2 df 1f d3 a5 af  13 57 bf 7f 91 b8 8c 6c   u....... .W.....l
+0030   69 63 bf 23 32 2b a8 c4  58 27 2e 0f 34 c8 9b d0   ic.#2+.. X'..4...
+0040   14 40 65 4f ed 28 65 c4  f4 4b df 88 68 f7 41 21   .@eO.(e. .K..h.A!
+0050   52 59 80 91 86 0d b4 af  74 a9 d7 9e 78 01 bc 8b   RY...... t...x...
+0060   40 c8 ab 5b d6 a7 91 b1  f0 1a 00 98 5d 20 34 3c   @..[.... ....] 4<
+0070   2e 59 98 9a da                                     .Y...
+
+--- Transacción Cifrada #25 (Frame #26) ---
+Timestamp: 2026-10-15 15:37:52.955925 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 70bab6d5de0d59e2d6c6c5d7
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 5333e1bd112b9100c98dc89b648531e3...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 1b36bedf02409a6fef79658611edfd50
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 70  ba b6 d5 de 0d 59 e2 d6   AESGCM|p .....Y..
+0010   c6 c5 d7 53 33 e1 bd 11  2b 91 00 c9 8d c8 9b 64   ...S3... +......d
+0020   85 31 e3 22 dd f8 2b 36  34 46 0f ec 30 8f 16 64   .1."..+6 4F..0..d
+0030   9d a4 87 09 97 7a 98 ee  10 6b 54 9e 9b 55 04 b4   .....z.. .kT..U..
+0040   aa b9 bb 7a e2 63 63 87  c0 02 23 04 7c 1e 75 a9   ...z.cc. ..#.|.u.
+0050   67 20 f3 05 00 f5 2a 7f  de 3a 90 9f 32 bc 96 59   g ....*. .:..2..Y
+0060   66 ae cf 1e f1 26 94 1b  36 be df 02 40 9a 6f ef   f....&.. 6...@.o.
+0070   79 65 86 11 ed fd 50                               ye....P
+
+--- Transacción Cifrada #26 (Frame #27) ---
+Timestamp: 2026-10-15 15:37:52.956318 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : d9ac0ec1292c1d5c0b0f3bfe
+  [0x0013 - 0x0065] Ciphertext (83 B)      : 54f1527303e503c507dff69dbb149ca1...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : 30a2cb08f5f8b697814c5d66c2a01c5a
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c d9  ac 0e c1 29 2c 1d 5c 0b   AESGCM|. ...),.\.
+0010   0f 3b fe 54 f1 52 73 03  e5 03 c5 07 df f6 9d bb   .;.T.Rs. ........
+0020   14 9c a1 50 e0 e2 13 17  4b d5 e8 ab e9 d1 cc 29   ...P.... K......)
+0030   36 74 6c 8b 8e bc e9 d1  41 91 a7 2a 56 1d 76 d2   6tl..... A..*V.v.
+0040   e1 9f 37 72 8c 3c 82 4f  b3 8c 15 34 e7 04 4b 96   ..7r.<.O ...4..K.
+0050   2a e2 3e b9 73 81 f2 e2  d4 ce e3 02 ae ca 1b 15   *.>.s... ........
+0060   04 ff 61 a9 cf 1d 30 a2  cb 08 f5 f8 b6 97 81 4c   ..a...0. .......L
+0070   5d 66 c2 a0 1c 5a                                  ]f...Z
+
+--- Transacción Cifrada #27 (Frame #28) ---
+Timestamp: 2026-10-15 15:37:52.956748 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 157 B | Payload: 117 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : f0f8f4dd1c03712bff6b0eac
+  [0x0013 - 0x0064] Ciphertext (82 B)      : 7cc3b966bb6f87e98fe603ca18f116db...
+  [0x0065 - 0x0074] GCM Auth Tag (16 B)    : 541b7dc20162b6cd08575144d2469440
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c f0  f8 f4 dd 1c 03 71 2b ff   AESGCM|. .....q+.
+0010   6b 0e ac 7c c3 b9 66 bb  6f 87 e9 8f e6 03 ca 18   k..|..f. o.......
+0020   f1 16 db eb b7 fa 16 47  22 7e 92 c4 f3 38 79 3c   .......G "~...8y<
+0030   e6 f5 fb a8 c2 de 40 b3  5e 58 6d b9 7e cb c0 16   ......@. ^Xm.~...
+0040   ac 05 df 05 5f b6 77 87  d7 dc 64 4d ea 38 80 c7   ...._.w. ..dM.8..
+0050   33 11 d1 e4 44 26 0a 09  db f0 09 07 1c 51 ee 4d   3...D&.. .....Q.M
+0060   e0 f7 e1 78 d5 54 1b 7d  c2 01 62 b6 cd 08 57 51   ...x.T.} ..b...WQ
+0070   44 d2 46 94 40                                     D.F.@
+
+--- Transacción Cifrada #28 (Frame #29) ---
+Timestamp: 2026-10-15 15:37:52.957068 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 03f376986f5e5fad475af914
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 089977a17aeadd725763308c2c6e65f7...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : edec12aba461b38aba96e9290092a04d
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 03  f3 76 98 6f 5e 5f ad 47   AESGCM|. .v.o^_.G
+0010   5a f9 14 08 99 77 a1 7a  ea dd 72 57 63 30 8c 2c   Z....w.z ..rWc0.,
+0020   6e 65 f7 e0 e3 d3 05 7d  8e e3 38 94 a2 1f 58 03   ne.....} ..8...X.
+0030   ae b2 de 3a c2 3c d0 86  ed a3 9c 16 d0 ba f8 1f   ...:.<.. ........
+0040   88 b9 93 52 cc 0a 56 c6  af 47 1c e9 36 58 33 9b   ...R..V. .G..6X3.
+0050   93 3c a9 64 5b da 16 fa  6e b7 ee 5c aa be b4 71   .<.d[... n..\...q
+0060   58 6e b8 15 18 41 dc ed  ec 12 ab a4 61 b3 8a ba   Xn...A.. ....a...
+0070   96 e9 29 00 92 a0 4d                               ..)...M
+
+--- Transacción Cifrada #29 (Frame #30) ---
+Timestamp: 2026-10-15 15:37:52.957493 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 5ed68b9d41a6041d27e5d03f
+  [0x0013 - 0x0065] Ciphertext (83 B)      : e530ef43fb159400b765c49b4bbb61fa...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : b679a71cea167a752f888f556e6a99e3
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 5e  d6 8b 9d 41 a6 04 1d 27   AESGCM|^ ...A...'
+0010   e5 d0 3f e5 30 ef 43 fb  15 94 00 b7 65 c4 9b 4b   ..?.0.C. ....e..K
+0020   bb 61 fa 90 44 fc fd ea  70 82 53 41 d3 1c 48 3a   .a..D... p.SA..H:
+0030   d5 c5 90 13 d6 b6 87 26  b3 ea bd e9 e0 05 34 3f   .......& ......4?
+0040   5f 2d c5 f7 ca 59 b6 40  e2 34 b0 78 97 1d 0c a6   _-...Y.@ .4.x....
+0050   36 ee 69 70 de d3 22 14  35 79 fe d7 99 9c e2 17   6.ip..". 5y......
+0060   10 a5 e1 cd 8e 04 b6 79  a7 1c ea 16 7a 75 2f 88   .......y ....zu/.
+0070   8f 55 6e 6a 99 e3                                  .Unj..
+
+--- Transacción Cifrada #30 (Frame #31) ---
+Timestamp: 2026-10-15 15:37:52.957829 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 75a700b47bcb59eb876b0943
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 078663a09506fe659a968b26e5e3138d...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 0efdf4897cd7c4683c3eabd91910e004
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 75  a7 00 b4 7b cb 59 eb 87   AESGCM|u ...{.Y..
+0010   6b 09 43 07 86 63 a0 95  06 fe 65 9a 96 8b 26 e5   k.C..c.. ..e...&.
+0020   e3 13 8d 25 27 34 2d ba  00 5a bf 92 75 74 e2 3d   ...%'4-. .Z..ut.=
+0030   1f 44 06 4c 87 e3 09 48  c3 99 d3 fe dc b9 2c 58   .D.L...H ......,X
+0040   77 56 38 aa 25 ea 20 13  fb 05 69 a4 ad e7 1f 6e   wV8.%. . ..i....n
+0050   22 d1 ff 6f 55 42 e7 9d  63 73 ae a5 ff da ab ca   "..oUB.. cs......
+0060   85 4b 14 53 67 25 7b 0e  fd f4 89 7c d7 c4 68 3c   .K.Sg%{. ...|..h<
+0070   3e ab d9 19 10 e0 04                               >......
+
+--- Transacción Cifrada #31 (Frame #32) ---
+Timestamp: 2026-10-15 15:37:52.958311 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : cca7fd45f517374c588be3f0
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 619b145bf19a4da91a8505f45d4b17e7...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 79f652159b88b8e14f36101193c7bc14
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c cc  a7 fd 45 f5 17 37 4c 58   AESGCM|. ..E..7LX
+0010   8b e3 f0 61 9b 14 5b f1  9a 4d a9 1a 85 05 f4 5d   ...a..[. .M.....]
+0020   4b 17 e7 8f f5 f7 ad 9f  04 1c 1e 38 d3 56 ba 7a   K....... ...8.V.z
+0030   8a 23 2d 1a e6 c5 02 7d  b0 67 65 e3 86 ec 8d 4a   .#-....} .ge....J
+0040   a2 93 ef a4 50 f4 cc e8  f3 fc ec 01 88 77 4f 28   ....P... .....wO(
+0050   be de 74 b5 5d e7 a1 16  86 0f 48 38 ef 1c f0 bc   ..t.]... ..H8....
+0060   cc c0 59 67 2d 59 b4 79  f6 52 15 9b 88 b8 e1 4f   ..Yg-Y.y .R.....O
+0070   36 10 11 93 c7 bc 14                               6......
+
+--- Transacción Cifrada #32 (Frame #33) ---
+Timestamp: 2026-10-15 15:37:52.958970 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 161 B | Payload: 121 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 4848829f37e165c9528e0ae1
+  [0x0013 - 0x0068] Ciphertext (86 B)      : fe3d404869a8b3cc66e13d4853b0a8d6...
+  [0x0069 - 0x0078] GCM Auth Tag (16 B)    : 2875f25b99e559a58d7d580b65480ecb
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 48  48 82 9f 37 e1 65 c9 52   AESGCM|H H..7.e.R
+0010   8e 0a e1 fe 3d 40 48 69  a8 b3 cc 66 e1 3d 48 53   ....=@Hi ...f.=HS
+0020   b0 a8 d6 2d 05 5b 76 74  97 c6 10 c0 29 62 d4 3f   ...-.[vt ....)b.?
+0030   b9 95 5c 43 32 8d 79 69  67 c6 72 53 85 75 83 13   ..\C2.yi g.rS.u..
+0040   bf 51 9a 04 ea f5 fd 54  4a 1b 52 b4 bb 3d 39 7b   .Q.....T J.R..=9{
+0050   c9 d8 f7 f8 5d 45 d5 a1  3f 29 1f fc 01 25 49 e9   ....]E.. ?)...%I.
+0060   58 06 5a 16 d1 8d 54 ab  55 28 75 f2 5b 99 e5 59   X.Z...T. U(u.[..Y
+0070   a5 8d 7d 58 0b 65 48 0e  cb                        ..}X.eH. .
+
+--- Transacción Cifrada #33 (Frame #34) ---
+Timestamp: 2026-10-15 15:37:52.960171 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 6daa50fc04b47dbf091430b1
+  [0x0013 - 0x0067] Ciphertext (85 B)      : e9f34ea3307f6c241c1640684e399d1e...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : a6bd52767c46d3d44c58c9f643a79796
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 6d  aa 50 fc 04 b4 7d bf 09   AESGCM|m .P...}..
+0010   14 30 b1 e9 f3 4e a3 30  7f 6c 24 1c 16 40 68 4e   .0...N.0 .l$..@hN
+0020   39 9d 1e 79 e4 b2 6d ac  52 27 1c 0c cd 17 88 0c   9..y..m. R'......
+0030   f4 20 fe d0 38 93 4f fa  67 6d 3e 1d 5a 7c 8c f8   . ..8.O. gm>.Z|..
+0040   21 35 13 5f f1 54 ab 3a  66 71 bd db 13 de de aa   !5._.T.: fq......
+0050   39 93 ef 66 54 89 f1 32  26 3a 48 ce 25 32 7c 0e   9..fT..2 &:H.%2|.
+0060   b8 ad d5 85 60 56 b6 88  a6 bd 52 76 7c 46 d3 d4   ....`V.. ..Rv|F..
+0070   4c 58 c9 f6 43 a7 97 96                            LX..C...
+
+--- Transacción Cifrada #34 (Frame #35) ---
+Timestamp: 2026-10-15 15:37:52.960563 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 5f087d656b1ed617d52e3124
+  [0x0013 - 0x0066] Ciphertext (84 B)      : a435b4b408765041d5e2d304a59f2399...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : a8ec7965bc0b0e2bb527f08b05bac03e
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 5f  08 7d 65 6b 1e d6 17 d5   AESGCM|_ .}ek....
+0010   2e 31 24 a4 35 b4 b4 08  76 50 41 d5 e2 d3 04 a5   .1$.5... vPA.....
+0020   9f 23 99 1b b7 33 0a d0  06 b5 85 78 53 64 ce 91   .#...3.. ...xSd..
+0030   80 f2 8e 00 46 8e 19 01  36 de 7c 53 78 9e f0 51   ....F... 6.|Sx..Q
+0040   08 cb 7d 80 df 09 2d e1  ae ce 96 2d 6a fb bc b1   ..}...-. ...-j...
+0050   df 20 10 2b b1 a1 96 e6  20 c4 b5 dd 84 f9 eb 03   . .+....  .......
+0060   83 74 5f 79 71 cc 2b a8  ec 79 65 bc 0b 0e 2b b5   .t_yq.+. .ye...+.
+0070   27 f0 8b 05 ba c0 3e                               '.....>
+
+--- Transacción Cifrada #35 (Frame #36) ---
+Timestamp: 2026-10-15 15:37:52.961570 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 2b03ce1fc62f19b9e000080a
+  [0x0013 - 0x0065] Ciphertext (83 B)      : 3b91d913b5cfa5bc6951e26e5280b9dd...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : 83ced21fdfe560c4d3bf0d63880f9515
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 2b  03 ce 1f c6 2f 19 b9 e0   AESGCM|+ ..../...
+0010   00 08 0a 3b 91 d9 13 b5  cf a5 bc 69 51 e2 6e 52   ...;.... ...iQ.nR
+0020   80 b9 dd ea 74 6b b4 7a  c7 17 02 32 cf 41 e8 dc   ....tk.z ...2.A..
+0030   8c 0d b3 ea f0 30 c1 36  ea 46 da d7 50 89 cb 3b   .....0.6 .F..P..;
+0040   02 7c 15 3f 7f db ee a5  c5 c4 2c e2 31 b9 c2 9e   .|.?.... ..,.1...
+0050   0b 96 e5 ce 2c 50 44 95  cf bd 06 88 84 15 f8 c6   ....,PD. ........
+0060   4c 8f c6 a2 c8 db 83 ce  d2 1f df e5 60 c4 d3 bf   L....... ....`...
+0070   0d 63 88 0f 95 15                                  .c....
+
+--- Transacción Cifrada #36 (Frame #37) ---
+Timestamp: 2026-10-15 15:37:52.962038 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 159 B | Payload: 119 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : aea1388078eaeb1177a5ca11
+  [0x0013 - 0x0066] Ciphertext (84 B)      : 522898b426daf3f8a291a28dcaffc705...
+  [0x0067 - 0x0076] GCM Auth Tag (16 B)    : 46c08ece653b1075059060ad9692d579
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c ae  a1 38 80 78 ea eb 11 77   AESGCM|. .8.x...w
+0010   a5 ca 11 52 28 98 b4 26  da f3 f8 a2 91 a2 8d ca   ...R(..& ........
+0020   ff c7 05 c0 3a 27 57 8f  49 00 84 0f c9 6b c6 81   ....:'W. I....k..
+0030   6d 54 62 ca 75 80 21 75  e2 99 43 33 96 93 68 db   mTb.u.!u ..C3..h.
+0040   c0 a3 77 27 de 45 ea 59  5b 16 1d d1 52 2e 82 4a   ..w'.E.Y [...R..J
+0050   61 58 8b a6 ad 47 67 8e  77 ca 0b db 7f 45 ed c2   aX...Gg. w....E..
+0060   7e 4c 09 2b 17 07 ed 46  c0 8e ce 65 3b 10 75 05   ~L.+...F ...e;.u.
+0070   90 60 ad 96 92 d5 79                               .`....y
+
+--- Transacción Cifrada #37 (Frame #38) ---
+Timestamp: 2026-10-15 15:37:52.962504 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : cd596838db379cbf7d398f7b
+  [0x0013 - 0x0067] Ciphertext (85 B)      : b3a5e398054f54818bc474d742750236...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : 6cfdd001e06dd12b4036347065f8048d
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c cd  59 68 38 db 37 9c bf 7d   AESGCM|. Yh8.7..}
+0010   39 8f 7b b3 a5 e3 98 05  4f 54 81 8b c4 74 d7 42   9.{..... OT...t.B
+0020   75 02 36 1b e2 47 a4 52  66 85 7b 7e 42 15 ae 8d   u.6..G.R f.{~B...
+0030   27 f1 11 5e d4 cd 22 4a  28 46 fc 4d 8e 45 4d f9   '..^.."J (F.M.EM.
+0040   92 9a d6 e6 a7 14 3e 58  96 72 22 d8 98 18 8b 88   ......>X .r".....
+0050   5e f5 ab e5 a4 ac ff 5a  8c d8 95 39 30 44 ea 3c   ^......Z ...90D.<
+0060   34 f3 ae 19 46 d2 c7 fc  6c fd d0 01 e0 6d d1 2b   4...F... l....m.+
+0070   40 36 34 70 65 f8 04 8d                            @64pe...
+
+--- Transacción Cifrada #38 (Frame #39) ---
+Timestamp: 2026-10-15 15:37:52.963001 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 160 B | Payload: 120 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : b3a895d40a67e146f2a30352
+  [0x0013 - 0x0067] Ciphertext (85 B)      : 461effee3f2c795932f7b6ff58d6d1b6...
+  [0x0068 - 0x0077] GCM Auth Tag (16 B)    : bd94c885b265a0d3ae4d13f1b0946564
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c b3  a8 95 d4 0a 67 e1 46 f2   AESGCM|. ....g.F.
+0010   a3 03 52 46 1e ff ee 3f  2c 79 59 32 f7 b6 ff 58   ..RF...? ,yY2...X
+0020   d6 d1 b6 19 34 d2 bb 33  6d 4e 5e 34 80 d9 ae dd   ....4..3 mN^4....
+0030   52 83 9a a8 70 bc 28 c4  48 5f a3 44 9c e1 eb e4   R...p.(. H_.D....
+0040   9a 06 65 6d 11 af bf 43  39 c5 f2 08 d2 eb 8c 6a   ..em...C 9......j
+0050   c9 d2 9b 12 80 b4 d7 56  30 a5 2b e5 00 fb d0 7f   .......V 0.+.....
+0060   0b 57 ba d5 c3 2c 64 1f  bd 94 c8 85 b2 65 a0 d3   .W...,d. .....e..
+0070   ae 4d 13 f1 b0 94 65 64                            .M....ed
+
+--- Transacción Cifrada #39 (Frame #40) ---
+Timestamp: 2026-10-15 15:37:52.963573 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 161 B | Payload: 121 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 99712d0177833d0cccbb032e
+  [0x0013 - 0x0068] Ciphertext (86 B)      : 9fed980c413f86eab67e0da58a3246ea...
+  [0x0069 - 0x0078] GCM Auth Tag (16 B)    : 8965b0c1b3f7db873ae2a425687c7340
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 99  71 2d 01 77 83 3d 0c cc   AESGCM|. q-.w.=..
+0010   bb 03 2e 9f ed 98 0c 41  3f 86 ea b6 7e 0d a5 8a   .......A ?...~...
+0020   32 46 ea 13 9f 69 33 d7  df 26 25 9e db 5c 15 53   2F...i3. .&%..\.S
+0030   c6 02 96 e6 c5 73 f2 ce  f9 cc 4f 5c 43 35 db ea   .....s.. ..O\C5..
+0040   64 66 15 c4 b1 03 4f 25  49 21 37 41 26 ad 81 09   df....O% I!7A&...
+0050   75 a3 04 73 a9 36 62 75  cd 86 fc 43 3e 11 d4 66   u..s.6bu ...C>..f
+0060   62 02 62 ee af 66 f6 6e  88 89 65 b0 c1 b3 f7 db   b.b..f.n ..e.....
+0070   87 3a e2 a4 25 68 7c 73  40                        .:..%h|s @
+
+--- Transacción Cifrada #40 (Frame #41) ---
+Timestamp: 2026-10-15 15:37:52.963938 | 10.10.10.10:49152 -> 10.10.10.20:4444 (TCP) | Frame: 158 B | Payload: 118 B
+  [0x0000 - 0x0006] Encabezado (7 B)       : AESGCM| (41455347434d7c)
+  [0x0007 - 0x0012] Nonce GCM (12 B)       : 4a35bc02d6838969a8b51083
+  [0x0013 - 0x0065] Ciphertext (83 B)      : f401954970e336be9ba4a02e60c0388c...
+  [0x0066 - 0x0075] GCM Auth Tag (16 B)    : b1d0a17ee25cd6e0e73f68abc9b259f7
+Volcado Payload Hex/ASCII:
+0000   41 45 53 47 43 4d 7c 4a  35 bc 02 d6 83 89 69 a8   AESGCM|J 5.....i.
+0010   b5 10 83 f4 01 95 49 70  e3 36 be 9b a4 a0 2e 60   ......Ip .6.....`
+0020   c0 38 8c da 1e ab 61 45  7d a7 15 94 b7 e7 cb 97   .8....aE }.......
+0030   7e c4 90 d9 f0 b9 6b e7  b1 b6 46 fc d3 60 4c 13   ~.....k. ..F..`L.
+0040   52 5d 93 17 71 c8 53 c4  12 fc 10 06 e1 0a 37 da   R]..q.S. ......7.
+0050   09 ea 89 a5 44 37 cb cd  ef 81 d8 25 da 02 68 ae   ....D7.. ...%..h.
+0060   f9 0a 9c 33 7b b8 b1 d0  a1 7e e2 5c d6 e0 e7 3f   ...3{... .~.\...?
+0070   68 ab c9 b2 59 f7                                  h...Y.
