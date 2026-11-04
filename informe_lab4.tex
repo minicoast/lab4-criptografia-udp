@@ -215,41 +215,7 @@ En él se aplicaron los cuatro algoritmos solicitados y directivas de seguridad 
     \item \textbf{Seguridad de Autenticación:} Se inhabilita el acceso de \texttt{root} (\texttt{PermitRootLogin no}) y contraseñas vacías (\texttt{PermitEmptyPasswords no}), habilitando registro detallado (\texttt{LogLevel VERBOSE}).
 \end{itemize}
 
-\begin{lstlisting}[language=bash,caption={Configuración criptográfica en \texttt{actividad\_1/sshd\_config}.}]
-# ========================================================
-# Configuracion Servidor OpenSSH - Laboratorio 4 Criptografia
-# Algoritmos criptograficos forzados explicitamente:
-#   - KexAlgorithms: curve25519-sha256
-#   - Ciphers: aes256-ctr
-#   - MACs: hmac-sha2-256
-#   - HostKeyAlgorithms / PubkeyAcceptedAlgorithms: ssh-ed25519
-# ========================================================
-
-Port 22
-ListenAddress 0.0.0.0
-
-# Clave privada de host Ed25519
-HostKey /etc/ssh/ssh_host_ed25519_key
-
-# Algoritmos criptograficos requeridos por la guia y rubrica
-KexAlgorithms curve25519-sha256
-Ciphers aes256-ctr
-MACs hmac-sha2-256
-HostKeyAlgorithms ssh-ed25519
-PubkeyAcceptedAlgorithms ssh-ed25519
-
-# Parametros de autenticacion y seguridad
-PasswordAuthentication yes
-PubkeyAuthentication yes
-PermitEmptyPasswords no
-PermitRootLogin no
-
-# Nivel de registro y subsistema SFTP
-LogLevel VERBOSE
-Subsystem sftp /usr/lib/openssh/sftp-server
-\end{lstlisting}
-
-La aplicación efectiva de estos algoritmos en memoria fue auditada en tiempo de ejecución ejecutando \texttt{docker exec servidor-ssh sshd -T}, corroborando que los cinco parámetros coinciden con lo exigido (Figura~\ref{fig:sshd_config}).
+El contenido íntegro del archivo configurado y la aplicación efectiva de estos algoritmos en memoria se muestran en la Figura~\ref{fig:sshd_config}, donde la ejecución de \texttt{docker exec servidor-ssh sshd -T} corrobora que los cinco parámetros coinciden exactamente con lo exigido.
 
 \begin{figure}[H]
     \centering
