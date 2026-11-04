@@ -8,7 +8,7 @@ env/
 
 # Archivos auxiliares temporales de compilación LaTeX
 *.aux
-*.log
+informe_lab4.log
 *.out
 *.toc
 *.lof
