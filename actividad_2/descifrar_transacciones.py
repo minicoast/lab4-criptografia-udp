@@ -1,16 +1,4 @@
 #!/usr/bin/env python3
-"""
-Laboratorio 4 - Criptografía y Seguridad en Redes
-Actividad 2: Análisis de Captura .pcap y Descifrado de Transacciones Financieras
-
-Procedimiento criptográfico implementado:
-1. Localización del paquete con etiqueta 'RSA_PIN|', extracción de salt (16 bytes)
-   y recuperación del PIN de 4 dígitos mediante RSA-OAEP con SHA-256.
-2. Derivación de la clave simétrica AES de 256 bits (32 bytes) mediante Scrypt
-   con parámetros exactos n = 2**14, r = 8, p = 1.
-3. Localización de los 40 paquetes 'AESGCM|', extracción del nonce de 12 bytes
-   y descifrado autenticado (AEAD) mediante AES-GCM.
-"""
 
 import argparse
 import os
